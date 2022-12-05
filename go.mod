@@ -1,4 +1,4 @@
-module github.com/Patricol/csi-sshfs
+module github.com/Hypsen/csi-sshfs
 
 go 1.15
 

@@ -1,4 +1,4 @@
-module github.com/Patricol/csi-sshfs
+module github.com/Hypsen/csi-sshfs
 
 require (
 	github.com/container-storage-interface/spec v1.3.0

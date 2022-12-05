@@ -44,7 +44,7 @@ spec:
             - name: socket-dir
               mountPath: /csi
         - name: sshfs
-          image: patricol/csi-sshfs:latest
+          image: hypsen/csi-sshfs:latest
           args :
             - "--nodeid=$(NODE_ID)"
             - "--endpoint=$(CSI_ENDPOINT)"

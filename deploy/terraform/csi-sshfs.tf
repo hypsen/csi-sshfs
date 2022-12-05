@@ -172,7 +172,7 @@ resource "kubernetes_deployment" "csi_controller_sshfs" {
         }
         container {
           name = "sshfs"
-          image = "patricol/csi-sshfs:${local.csi-sshfs_image_tag}"
+          image = "hypsen/csi-sshfs:${local.csi-sshfs_image_tag}"
           image_pull_policy = "Always"
           args = [
             "run",
@@ -363,7 +363,7 @@ resource "kubernetes_daemonset" "csi_nodeplugin_sshfs" {
         }
         container {
           name = "sshfs"
-          image = "patricol/csi-sshfs:${local.csi-sshfs_image_tag}"
+          image = "hypsen/csi-sshfs:${local.csi-sshfs_image_tag}"
           image_pull_policy = "Always"
           args = compact([
             "run",

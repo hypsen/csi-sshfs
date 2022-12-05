@@ -14,21 +14,21 @@ deps: deps-clean
 
 
 build:
-	docker build . --pull --no-cache -t patricol/csi-sshfs:latest
+	docker build . --pull --no-cache -t hypsen/csi-sshfs:latest
 
 build-with-cache:
-	docker build . --pull -t patricol/csi-sshfs:latest
+	docker build . --pull -t hypsen/csi-sshfs:latest
 
 push: build-with-cache
-	docker push patricol/csi-sshfs:latest
+	docker push hypsen/csi-sshfs:latest
 
 build-debug:
-	docker build . --pull --no-cache -t patricol/csi-sshfs:debug -f Dockerfile.debug
+	docker build . --pull --no-cache -t hypsen/csi-sshfs:debug -f Dockerfile.debug
 
 build-debug-with-cache:
-	docker build . --pull -t patricol/csi-sshfs:debug -f Dockerfile.debug
+	docker build . --pull -t hypsen/csi-sshfs:debug -f Dockerfile.debug
 
 push-debug: build-debug-with-cache
-	docker push patricol/csi-sshfs:debug
+	docker push hypsen/csi-sshfs:debug
 
 push-all: push push-debug

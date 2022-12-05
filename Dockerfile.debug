@@ -3,7 +3,7 @@ RUN apk add --no-cache git \
  && go get github.com/go-delve/delve/cmd/dlv
 
 ENV CGO_ENABLED=0
-WORKDIR /go/src/github.com/Patricol/csi-sshfs
+WORKDIR /go/src/github.com/Hypsen/csi-sshfs
 
 #COPY go.mod .
 #COPY go.sum .
@@ -12,7 +12,7 @@ COPY . .
 RUN go get ./...
 
 RUN export BUILD_TIME=$(date -R) \
- && go build -o /csi-sshfs -ldflags "-X 'github.com/Patricol/csi-sshfs/pkg/sshfs.BuildTime=${BUILD_TIME}'" -gcflags "all=-N -l" github.com/Patricol/csi-sshfs/cmd/csi-sshfs
+ && go build -o /csi-sshfs -ldflags "-X 'github.com/Hypsen/csi-sshfs/pkg/sshfs.BuildTime=${BUILD_TIME}'" -gcflags "all=-N -l" github.com/Hypsen/csi-sshfs/cmd/csi-sshfs
 
 FROM alpine:latest
 EXPOSE 40000

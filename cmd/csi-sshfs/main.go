@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/Patricol/csi-sshfs/pkg/sshfs"
+	"github.com/Hypsen/csi-sshfs/pkg/sshfs"
 	"github.com/spf13/cobra"
 	"k8s.io/klog/v2"
 )
